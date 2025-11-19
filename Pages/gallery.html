@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | TekoLink</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/burger-menu.css">
+</head>
+<body>
+    <div class="current-page-header" id="currentPageHeader">
+        <div class="page-title">Gallery</div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <button class="search-trigger" onclick="toggleSearch()" style="background: #3498db; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">
+                🔍 Search
+            </button>
+            <div class="burger-menu" id="burgerMenu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="../index.html" data-text="Home"><span>Home</span></a></li>
+            <li><span class="current-page">Gallery</span></li>
+            <li><a href="about.html" data-text="About"><span>About</span></a></li>
+            <li><a href="services.html" data-text="Services"><span>Services</span></a></li>
+            <li><a href="enquiry.html" data-text="Enquiry"><span>Enquiry</span></a></li>
+            <li><a href="contact.html" data-text="Contact"><span>Contact</span></a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Gallery</h1>
+        <p>Click on an image to view it in full size.</p>
+    </header>
+
+    <main>
+        <div class="gallery">
+            <div class="gallery-item"><img src="../Assets/computer repair.jpg" alt="Computer repair" class="gallery-img"></div>
+            <div class="gallery-item"><img src="../Assets/web dev.jpg" alt="Web development" class="gallery-img"></div>
+            <div class="gallery-item"><img src="../Assets/app dev.jpg" alt="App development" class="gallery-img"></div>
+            <div class="gallery-item"><img src="../Assets/data center server.jpg" alt="Tech services" class="gallery-img"></div>
+            <div class="gallery-item"><img src="../Assets/cable managemnt.jpg" alt="Cable management" class="gallery-img"></div>
+        </div>
+
+        <div class="modal" id="gallery-modal">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="Full image" id="modal-img">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TekoLink Innovations</p>
+    </footer>
+
+    <script src="../js/burger-menu.js"></script>
+    
+    <!-- Gallery lightbox -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const galleryItems = document.querySelectorAll('.gallery-img');
+        const modal = document.getElementById('gallery-modal');
+        const modalImg = document.getElementById('modal-img');
+        const closeBtn = modal.querySelector('.close-btn');
+
+        galleryItems.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = 'flex';
+                modalImg.src = this.src;
+                modalImg.alt = this.alt;
+            });
+        });
+
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Keyboard support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            }
+        });
+    });
+    </script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

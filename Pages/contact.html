@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — TekoLink Innovations</title>
+  <meta name="description" content="Get in touch with TekoLink Innovations for quotes, support and enquiries.">
+  <meta name="keywords" content="contact,tekolink,email,phone,Polokwane">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/burger-menu.css">
+</head>
+<body>
+    <div class="current-page-header" id="currentPageHeader">
+        <div class="page-title">Contact Us</div>
+        <div class="burger-menu" id="burgerMenu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="../index.html" data-text="Home"><span>Home</span></a></li>
+            <li><a href="gallery.html" data-text="Gallery"><span>Gallery</span></a></li>
+            <li><a href="about.html" data-text="About"><span>About</span></a></li>
+            <li><a href="services.html" data-text="Services"><span>Services</span></a></li>
+            <li><a href="enquiry.html" data-text="Enquiry"><span>Enquiry</span></a></li>
+            <li><span class="current-page">Contact</span></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header style="text-align:center">
+            <img src="../Assets/TekoLink.png" alt="TekoLink logo" width="160" height="120">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Reach us through the details below or send a message.</p>
+        </header>
+
+        <section class="contact-info-section">
+            <table class="contact-info">
+                <tr><td><strong>Telephone:</strong></td><td>066 550 1596</td></tr>
+                <tr><td><strong>Email:</strong></td><td><a href="mailto:info@TekoLink.co.za">info@TekoLink.co.za</a></td></tr>
+                <tr><td><strong>Address:</strong></td><td>7 Mokolo Street, Polokwane, Limpopo</td></tr>
+            </table>
+        </section>
+
+        <section class="map-section">
+            <h2>Find Our Location</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps?q=-23.934994,29.441693&z=14&output=embed" 
+                    width="100%" 
+                    height="320" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="TekoLink Innovations Location - 7 Mokolo Street, Polokwane, Limpopo"
+                    aria-label="Interactive map showing TekoLink Innovations location">
+                </iframe>
+            </div>
+            <p class="map-address">7 Mokolo Street, Polokwane, Limpopo, South Africa</p>
+        </section>
+
+        <section>
+            <h2 style="text-align:center">Send Us a Message</h2>
+            <form id="enquiry-form" class="contact-form" action="https://formsubmit.co/info@TekoLink.co.za" method="POST" novalidate>
+                <input type="hidden" name="_subject" value="Contact form submission">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
+                <div id="form-feedback" class="feedback-message"></div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="error-message" id="nameError">Please enter your full name (minimum 2 characters)</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error-message" id="emailError">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group full">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                        <div class="error-message" id="messageError">Please enter your message (minimum 10 characters)</div>
+                    </div>
+                    <div class="form-group full">
+                        <input type="submit" value="Send Message" id="submit-btn">
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer style="text-align:center;margin-top:20px">
+        <p>&copy; 2025 TekoLink Innovations</p>
+    </footer>
+
+    <script src="../js/form-validation.js"></script>
+    <script src="../js/scripts.js"></script>    
+    <script src="../js/burger-menu.js"></script>
+</body>
+</html>

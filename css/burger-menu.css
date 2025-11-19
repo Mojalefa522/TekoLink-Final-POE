@@ -1,0 +1,274 @@
+/* Current Page Header */
+.current-page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    z-index: 1001;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Burger Menu - Centered in header */
+.burger-menu {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1002;
+    background: white;
+    padding: 8px 5px;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    border: 2px solid #2c3e50;
+}
+
+.burger-line {
+    height: 3px;
+    width: 100%;
+    background-color: #2c3e50;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Burger Animation - Perfect X */
+.burger-menu.active .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 3px);
+}
+
+.burger-menu.active .burger-line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.burger-menu.active .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(3px, -3px);
+}
+
+/* Navigation Menu */
+.nav-menu {
+    position: fixed;
+    top: 60px;
+    right: -400px;
+    width: 280px;
+    height: calc(100vh - 60px);
+    background: #2c3e50;
+    z-index: 1003;
+    transition: right 0.4s ease;
+    padding: 0;
+    margin: 0;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    overflow-y: auto;
+}
+
+.nav-menu.active {
+    right: 0;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 40px 25px 25px;
+    margin: 0;
+}
+
+/* Navigation Menu Items */
+.nav-menu li {
+    margin-bottom: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Link Styling */
+.nav-menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    background: #34495e;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    height: 52px; /* Fixed height for consistent animation */
+}
+
+/* Current Page Styling */
+.nav-menu .current-page {
+    display: block;
+    padding: 15px 20px;
+    color: #3498db;
+    background: #2c3e50;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid #3498db;
+    cursor: default;
+    height: 52px;
+}
+
+.nav-menu .current-page:hover {
+    background: #2c3e50;
+    transform: none;
+}
+
+/* Hover Effect - Only One Text Shows */
+.nav-menu a span {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect - Only One Text Shows */
+.nav-menu a {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-menu a span {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.nav-menu a::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* On hover: hide original text and show hover text */
+.nav-menu a:hover span {
+    opacity: 0;
+}
+
+.nav-menu a:hover::before {
+    opacity: 1;
+}
+
+.nav-menu a:hover {
+    background: #34495e;
+    transform: translateX(-5px);
+    border-color: #2980b9;
+}
+
+/* Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    display: none;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
+/* Body States */
+body.menu-open {
+    overflow: hidden;
+}
+
+body {
+    padding-top: 60px !important;
+}
+
+/* Header Scroll Effect */
+.current-page-header {
+    transition: background-color 0.3s ease;
+}
+
+.current-page-header.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+}
+/* Search Feature Styles */
+.search-container {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    z-index: 1002;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: none;
+}
+
+.search-container.active {
+    display: block;
+}
+
+.search-input {
+    width: 250px;
+    padding: 10px;
+    border: 2px solid #2c3e50;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.search-btn {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+}
+
+.search-result-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    background: #f8f9fa;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
