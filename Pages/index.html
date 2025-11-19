@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- SEO Meta Tags -->
+  <title>TekoLink Innovations — Simple tech for small businesses</title>
+  <meta name="description" content="TekoLink Innovations — affordable websites, apps, and tech support for small businesses and freelancers in South Africa.">
+  <meta name="keywords" content="TekoLink, web design, app development, tech support, small business, South Africa, Polokwane">
+  <meta name="author" content="Kabelo Mojalefa">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph for social media -->
+  <meta property="og:title" content="TekoLink Innovations — Simple tech for small businesses">
+  <meta property="og:description" content="Affordable websites, apps, and IT support for small businesses and freelancers in South Africa.">
+  <meta property="og:image" content="./Assets/TekoLink.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tekolink1.netlify.app">
+  <meta name="google-site-verification" content="C8WIAGLSuKMhOoFvxIu3Dj0NO_RP1NXHNn2RSfWJ3mY"/>
+
+  <!-- Canonical URL for SEO -->
+  <link rel="canonical" href="https://tekolink1.netlify.app">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/burger-menu.css">
+  <style>
+    .dynamic-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 900px;
+      text-align: center;
+    }
+    .live-stats {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    .stat-item {
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      min-width: 120px;
+    }
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      color: #666;
+      display: block;
+    }
+    .live-clock {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin: 10px 0;
+    }
+    
+    /* Get in Touch button styles */
+    .get-in-touch-container {
+        text-align: center;
+        margin: 20px 0;
+        padding: 20px;
+    }
+    .get-in-touch-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        color: white;
+        padding: 14px 30px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .get-in-touch-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    }
+  </style>
+</head>
+<body>
+    <!-- SINGLE HEADER - Remove the duplicate one below -->
+    <div class="current-page-header" id="currentPageHeader">
+        <div class="page-title">Home</div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <div class="burger-menu" id="burgerMenu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+        <ul>
+            <li><span class="current-page">Home</span></li>
+            <li><a href="Pages/gallery.html" data-text="Gallery"><span>Gallery</span></a></li>
+            <li><a href="Pages/about.html" data-text="About"><span>About</span></a></li>
+            <li><a href="Pages/services.html" data-text="Services"><span>Services</span></a></li>
+            <li><a href="Pages/enquiry.html" data-text="Enquiry"><span>Enquiry</span></a></li>
+            <li><a href="Pages/contact.html" data-text="Contact"><span>Contact</span></a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="./Assets/TekoLink.png" alt="TekoLink Innovations - Tech startup in Polokwane South Africa" width="200" height="200">
+        <h1>Welcome to TekoLink</h1>
+        <p>Making technology simple, affordable, and accessible for small businesses and freelancers.</p>
+        
+        <!-- Get in Touch Button -->
+        <div class="get-in-touch-container">
+            <a href="Pages/contact.html" class="get-in-touch-btn">
+                Get in Touch
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Dynamic Real-time Content Section -->
+        <section class="dynamic-content">
+            <h2>Live Updates</h2>
+            <div class="live-clock" id="liveClock">Loading time...</div>
+            <div class="live-stats">
+                <div class="stat-item">
+                    <span class="stat-value" id="visitCount">0</span>
+                    <span class="stat-label">Page Visits</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="localTime">--:--</span>
+                    <span class="stat-label">Local Time</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="userTime">--:--</span>
+                    <span class="stat-label">Your Time</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Who We Are</h2>
+            <p>TekoLink Innovations is a South African tech startup creating accessible digital tools — websites, apps, and tech support — for small businesses and freelancers.</p>
+        </section>
+
+        <section>
+            <h2>Quick Links</h2>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+                <a class="button" href="Pages/gallery.html">View Services</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TekoLink Innovations</p>
+    </footer>
+
+    <script src="js/burger-menu.js"></script>
+    <script src="js/scripts.js"></script>
+    
+    <!-- Real-time content script -->
+    <script>
+    // Dynamic Real-time Content
+    document.addEventListener('DOMContentLoaded', function() {
+        // Live Clock
+        function updateClock() {
+            const now = new Date();
+            const liveClock = document.getElementById('liveClock');
+            const localTime = document.getElementById('localTime');
+            const userTime = document.getElementById('userTime');
+            
+            // South Africa Time (SAST)
+            const saTime = now.toLocaleTimeString('en-ZA', { 
+                timeZone: 'Africa/Johannesburg',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            
+            // User's Local Time
+            const userLocalTime = now.toLocaleTimeString('en-ZA', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            
+            if (liveClock) liveClock.textContent = saTime;
+            if (localTime) localTime.textContent = saTime.split(':').slice(0, 2).join(':');
+            if (userTime) userTime.textContent = userLocalTime.split(':').slice(0, 2).join(':');
+        }
+
+        // Visit Counter
+        function updateVisitCount() {
+            let visits = localStorage.getItem('tekolinkVisits');
+            visits = visits ? parseInt(visits) + 1 : 1;
+            localStorage.setItem('tekolinkVisits', visits);
+            const visitCount = document.getElementById('visitCount');
+            if (visitCount) visitCount.textContent = visits;
+        }
+
+        // Initialize
+        updateClock();
+        updateVisitCount();
+        
+        // Update clock every second
+        setInterval(updateClock, 1000);
+    });
+    </script>
+</body>
+</html>
